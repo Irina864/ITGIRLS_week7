@@ -1,4 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@800&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Playfair+Display&display=swap");
+body header .h-but button, body header .h-but, body header .conts, body header nav ul, body header .img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 body {
-  background-color: #EBF3F5;
+  font-family: "Manrope", sans-serif;
+  height: 8311px;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template: 1.25% 10% 1fr/100%;
+}
+body header {
+  grid-area: 1/1/2/2;
+  background-color: #c20000;
+  display: grid;
+  grid-template: 100%/17.5% 16.5% 1fr 31.5% 6.5% 18%;
+  justify-content: center;
+  align-items: center;
+}
+body header .img {
+  grid-area: 1/1/2/2;
+}
+body header .phone {
+  grid-area: 1/2/2/3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+}
+body header nav {
+  grid-area: 1/4/2/5;
+}
+body header nav ul li {
+  list-style-type: none;
+  text-decoration: none;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: #141414;
+}
+body header .conts {
+  grid-area: 1/5/2/6;
+  justify-content: space-between;
+}
+body header .h-but {
+  grid-area: 1/6/2/7;
+  height: 100%;
+  width: 100%;
+}
+body header .h-but button {
+  justify-content: center;
+  background-color: #5C8692;
+  font-size: 0.875em;
+  height: 60%;
+  color: #FFFFFF;
+  width: 77%;
+  border-color: #5C8692;
+}
+body header .h-but button div {
+  padding: 3%;
 }/*# sourceMappingURL=style.css.map */

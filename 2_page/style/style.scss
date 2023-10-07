@@ -10,10 +10,86 @@ $colorf1: #141414;
 $colorf2: #555555;
 $colorfbut: #5C8692;
 $colorbcans:#1E2C30;
-
-
-
+$colorhover:#286474;
+%flex-element-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
 
 body {
-    background-color: $colorpage3;
+    font-family: $font1;
+    height: 8311px;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1.25% 10% 1fr/ 100% ;
+    header {
+        grid-area: 1/1/2/2;
+        background-color: $colorpage1;
+        display: grid;
+        grid-template: 100% / 17.5% 16.5% 1fr 31.5% 6.5% 18%;
+        justify-content: center;
+        align-items: center;
+        .img {
+            grid-area: 1/1/2/2;
+            @extend  %flex-element-center;
+        }
+        .phone {
+            grid-area: 1/2/2/3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1em;
+        }
+        nav {
+            grid-area: 1/4/2/5;
+            ul{
+                @extend  %flex-element-center;
+            li {
+                list-style-type: none;
+                a {
+                    text-decoration: none;
+                    color: $colorf1;
+                    font-size: 1.0625em;
+                    .this {
+                        color: $colorfbut;
+                        this:hover {
+                            color: $colorhover;
+                            font-size: calc(1.0625em+1%);
+                        }
+                    }
+                }
+                text-decoration: none;
+            }
+        }}
+        .conts {
+            grid-area: 1/5/2/6;
+            @extend %flex-element-center;  
+            justify-content: space-between;          
+        }
+        .h-but {
+            grid-area: 1/6/2/7;
+            @extend %flex-element-center;
+            height: 100%;
+            width: 100%;
+            button {
+                @extend %flex-element-center;
+                justify-content: center;
+                background-color: $colorfbut;
+                font-size: 0.875em;
+                height: 60%;
+                color: $colorpage1;
+                width: 77%;
+                border-color: $colorfbut;
+                div{
+                    padding: 3%;
+                }
+                button:hover {
+                    color: $colorhover;
+                }
+            }
+        }
+    }
 }
