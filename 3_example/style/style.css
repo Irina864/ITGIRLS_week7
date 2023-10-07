@@ -1,0 +1,40 @@
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px);
+  gap: 5px;
+}
+
+.item {
+  color: white;
+}
+
+.item-1 {
+  background-color: red;
+}
+
+.item-2 {
+  background-color: orange;
+}
+
+.item-3 {
+  background-color: yellow;
+}
+
+.item-4 {
+  background-color: green;
+}
+
+.item-5 {
+  background-color: blue;
+}
+
+.item-6 {
+  background-color: violet;
+}/*# sourceMappingURL=style.css.map */
