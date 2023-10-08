@@ -22,7 +22,7 @@ button:hover {
 
 body {
   font-family: "Manrope", sans-serif;
-  height: 3151px;
+  min-height: 3151px;
   max-width: 1440px;
   margin: 0 auto;
   display: grid;
@@ -58,7 +58,7 @@ body header nav ul li {
 body header nav ul li a {
   text-decoration: none;
   color: #141414;
-  font-size: calc(8pxpx + 9px * ((100vw - 320px) / 1120));
+  font-size: calc(4pxpx + 13px * ((100vw - 320px) / 1120));
 }
 body header nav ul li a:hover {
   color: #286474;
@@ -78,7 +78,7 @@ body header .h-but {
 body header .h-but button {
   justify-content: center;
   background-color: #5C8692;
-  font-size: calc(8pxpx + 6px * ((100vw - 320px) / 1120));
+  font-size: calc(3pxpx + 11px * ((100vw - 320px) / 1120));
   height: 60%;
   color: #FFFFFF;
   width: 77%;
@@ -86,6 +86,15 @@ body header .h-but button {
 }
 body header .h-but button div {
   padding: 3%;
+}
+@media screen and (max-width: 700px) {
+  body header {
+    display: grid;
+    grid-template: 100%/50% 1fr 1fr 1fr 1fr 45%;
+  }
+  body header nav, body header .phone, body header .conts {
+    display: none;
+  }
 }
 body main {
   display: grid;
@@ -119,12 +128,12 @@ body main .about .aboutus h1 {
   margin-top: 0.9%;
   padding: 0;
   font-family: "Playfair Display", serif;
-  font-size: calc(35px + 20 * ((100vw - 320px) / 1120));
+  font-size: calc(24px + 31 * ((100vw - 320px) / 1120));
   line-height: 127%;
   letter-spacing: -5%;
 }
 body main .about .aboutus .welcome-p {
-  font-size: calc(15px + 4 * ((100vw - 320px) / 1120));
+  font-size: calc(9px + 10 * ((100vw - 320px) / 1120));
   color: #555555;
   line-height: 155%;
   letter-spacing: -10%;
@@ -132,6 +141,11 @@ body main .about .aboutus .welcome-p {
 body main .about .aboutus button {
   height: 20%;
   width: 50%;
+}
+@media screen and (max-width: 700px) {
+  body main .about .aboutus button {
+    width: 100%;
+  }
 }
 body main .about .img {
   width: 100%;
@@ -144,7 +158,7 @@ body main .about .img img {
 body main .services {
   background-color: #FFFFFF;
   display: grid;
-  grid-template: 100%/repeat(3, 1fr);
+  grid-template: 100%/repeat(auto-fit, minmax(250px, 1fr));
   align-items: center;
   padding: 0 8.2%;
   gap: 2.3%;
@@ -164,7 +178,7 @@ body main .services div .img img {
   width: 100%;
 }
 body main .services div h3 {
-  font-size: calc(20px + 6 * ((100vw - 320px) / 1120));
+  font-size: calc(14px + 12 * ((100vw - 320px) / 1120));
   color: #141414;
   margin: 0;
   padding: 4% 0 1.5% 0;
@@ -182,15 +196,21 @@ body main .services div button {
   background-color: #FFFFFF;
   font-size: calc(8px + 5 * ((100vw - 320px) / 1120));
 }
+@media screen and (max-width: 700px) {
+  body main .services div button {
+    width: 100%;
+  }
+}
 body main .take-care {
   background-color: #EBF3F5;
-  display: grid;
-  grid-template: 100%/repeat(2, 1fr);
+  display: flex;
+  justify-content: space-between;
 }
 body main .take-care .take-care-1 {
+  width: 40%;
   display: grid;
   grid-template: 21% 19.5% 20% 1fr/100%;
-  padding-left: 17%;
+  padding-left: 8.5%;
 }
 body main .take-care .take-care-1 .att {
   font-size: calc(8px + 7 * ((100vw - 320px) / 1120));
@@ -200,7 +220,7 @@ body main .take-care .take-care-1 .att {
   align-self: flex-end;
 }
 body main .take-care .take-care-1 h2 {
-  font-size: calc(35px + 10 * ((100vw - 320px) / 1120));
+  font-size: calc(24px + 21 * ((100vw - 320px) / 1120));
   color: #141414;
   font-family: "Playfair Display", serif;
   margin: 0;
@@ -230,18 +250,22 @@ body main .take-care .take-care-1 .tools .tool {
 body main .take-care .take-care-1 .tools .tool p {
   color: #141414;
   font-family: "Playfair Display", serif;
-  font-size: calc(15px + 7 * ((100vw - 320px) / 1120));
+  font-size: calc(10px + 12 * ((100vw - 320px) / 1120));
 }
-body main .take-care .img .img-1 {
-  position: absolute;
-  margin-top: 7%;
-  margin-left: 7%;
+@media screen and (max-width: 700px) {
+  body main .take-care .tools, body main .take-care .att-p {
+    width: 200%;
+  }
 }
-body main .take-care .img .img-2 {
+body main .take-care .img {
+  width: 42%;
+}
+body main .take-care .img img {
   position: relative;
   z-index: 1;
-  margin-top: 17.5%;
-  margin-left: 7%;
+  width: 100%;
+  max-width: 500px;
+  top: 10.5%;
 }
 body footer {
   background-color: #1E2C30;
@@ -269,16 +293,27 @@ body footer .menegment {
 }
 body footer .menegment h4 {
   text-decoration: none;
-  font-size: calc(15px + 7 * ((100vw - 320px) / 1120));
+  font-size: calc(8px + 14 * ((100vw - 320px) / 1120));
   color: #FFFFFF;
   font-family: "Playfair Display", serif;
 }
 body footer .menegment td, body footer .menegment p {
-  font-size: calc(14px + 3 * ((100vw - 320px) / 1120));
+  font-size: calc(8px + 9 * ((100vw - 320px) / 1120));
   color: #FFFFFF;
   line-height: 150%;
 }
 body footer .f-end {
   color: #FFFFFF;
-  font-size: calc(10px + 5 * ((100vw - 320px) / 1120));
+  font-size: calc(8px + 7 * ((100vw - 320px) / 1120));
+}
+
+@media screen and (max-width: 700px) {
+  footer .first-f {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .first-f img {
+    width: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */
